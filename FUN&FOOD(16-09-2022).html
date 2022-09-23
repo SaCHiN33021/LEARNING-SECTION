@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun&food.in</title>
+
+    <style>
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(135deg,rgba(0, 0, 255, 0.582),rgba(255, 0, 0, 0.664)),url("fun.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-sizing: border-box;
+}
+
+h3{
+    color: green;
+    font-size: 22px;
+    font-family: 'Anton', sans-serif;
+    text-transform: capitalize;
+    margin-top: 12px;
+    margin-left: 15px;
+}
+
+.navbar{
+    height: 58px;
+    display: flex;
+    background-color: rgba(255, 255, 0, 0.616);
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px white;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+    margin-right: 8x;
+    margin-bottom: -15px;
+}
+
+.menu-icon{
+    width: 27px;
+    cursor: pointer;
+    margin-left: 30px;
+    margin-right: 15px;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 32px;
+}
+
+nav a:hover{
+    background-color: #854d27;
+    color: #f4c95d;
+    transition-duration: 0.5s;
+    border-radius: 8px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.row{
+    display: flex;
+    height: 88%;
+    text-align: center;
+}
+
+.col{
+    flex-basis: 50%;
+}
+
+h1{
+    font-size: 48px;
+    width: 510px;
+    height: 126px;
+    text-align: left;
+    color: #dd1c1a;
+    border-radius: 10px;
+    font-family: Exotc350 Bd BT;
+    background-color: rgba(26, 24, 24, 0.39);
+    text-shadow: 3px 3px 5px white;
+    text-transform: capitalize;
+    margin-top: 165px;
+}
+
+.h1para{
+    font-size: 18px;
+    margin-top: -25px;
+    text-transform: capitalize;
+    text-align: left;
+    word-spacing: 5px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+p{
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+button{
+    width: 100px;
+    cursor: pointer;
+    color: black;
+    font-size: 15px;
+    padding: 12px 0px;
+    background-color: greenyellow;
+    border: 0px;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+}
+
+.card1{
+    background-image: linear-gradient(135deg,rgba(255, 255, 255, 0.295),rgba(0, 0, 0, 0.596)),url("pizza.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 3px 4px 6px white;
+}
+
+.card2{
+    background-image:linear-gradient(135deg,rgba(255, 255, 255, 0.295),rgba(0, 0, 0, 0.596)), url("non\ veg.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 3px 4px 6px white;
+}
+
+.card3{
+    background-image: linear-gradient(135deg,rgba(255, 255, 255, 0.295),rgba(0, 0, 0, 0.596)),url("burger.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 3px 4px 6px white;
+}
+
+.card4{
+    background-image: linear-gradient(135deg,rgba(255, 255, 255, 0.295),rgba(0, 0, 0, 0.596)),url("sweets.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 3px 4px 6px white;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+h5{
+    color: black;
+    margin-top: 0px;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 3px 3px 5px white;
+}
+
+.card p{
+    color: white;
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="navbar">
+
+        <h3><img src="cooking.png" alt="" class="logo"> Treat Yourself</h3>
+
+        <nav>
+            <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">recipes</a></li>
+            <li><a href="">blog</a></li>
+            <li><a href="">contact</a></li>
+        </ul>
+        </nav>
+    
+        <img src="menucolor.png" alt="" class="menu-icon">
+    </div>
+
+    
+    <div class="row">
+
+        <div class="col">
+            <h1>modern restaurant in center of the city</h1>
+            <p class="h1para"> <b>Vegefoods is an excellent fruits and vegetables website template for crafting a modern webspace. If you would like to sell products online, start the journey to creating a top-notch eCommerce website with Vegefoods. The layout has a clean and minimal web design which pushes products right in front of their eyes. There are loads of premium-like features to Vegefoods which will get you going in close to no time. The tool is also organized and simple to use, ensuring you get the most out of it without breaking a sweat. </b> </p>
+            <button type="button">explore</button>
+        </div>
+
+        <div class="col">
+            <div class="card card1">
+                <h5>fast food</h5>
+                <p>Hamburger ,Cheeseburger ,Sandwich ,Milk shake ,Burrito ,Taco ,Hot dog ,Fried chicken ,Donuts ,Baguette ,Soft drink ,Pizza ,Pretzel ,Pancake ,Bacon ,Chip Fry ,Noodle</p>
+            </div>
+
+            <div class="card card2">
+                <h5>non veg</h5>
+                <p>Grilled Chicken Escalope with Fresh Salsa ,Mutton Korma ,Pina Colada Pork Ribs ,Tandoori Lamb Chops ,Malabar Fish Biryani ,Keema Samosa with Yoghurt Dip.</p>
+            </div>
+
+            <div class="card card3">
+                <h5>regular-items</h5>
+                <p> Masala dosa ,Chaat ,Dal makhani ,Vada pav ,Stuffed paratha ,Dhokla ,Barfi ,Pani puri.</p>
+            </div>
+
+            <div class="card card4">
+                <h5>desserts</h5>
+                <p> pies, puddings, cupcakes, doughnuts, muffins, sweet breads, candies, sugary spreads and syrups.</p>
+            </div>
+            </div>
+        
+</div>
+</body>
+</html>

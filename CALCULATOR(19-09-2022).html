@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+    <style>
+
+        *{
+    font-family: "Copperplate Gothic Bold"
+}
+
+body{
+    background-color: grey;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color:rgb(238, 152, 39); 
+    max-width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 35px;
+    border-radius: 10px;
+    user-select: none;
+}
+
+#display-area{
+    width: 100%;
+    margin: 3vh 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2,minmax(40px,auto));
+    word-wrap: break-word;
+    padding-bottom: 20px;
+    border-bottom: 1px solid yellow;
+}
+
+#display-area .currentinput{
+    text-align: right;
+    height: 8vh;
+    color: green;
+    font-size: xx-large;
+    line-height: 2;
+    word-wrap: break-word;
+}
+
+#display-area .answerscreen{
+    text-align: right;
+    color: black;
+    height: 7px;
+    line-height: 3;
+    font-size: large;
+}
+
+.keypad-btns{
+    display: grid;
+    grid: repeat(5,70px) /repeat(4, 70px);
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+.keypad-btns button{
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    background-color: aqua;
+    color: brown;
+    font-size: x-large;
+}
+
+.keypad-btns .fun_btn{
+    color: orange;
+    background-color: aliceblue;
+    font-weight: bold;
+}
+
+.num_btn:hover{
+    background-color: blue;
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: black;
+        align-items: flex-start;
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <section id="display-area">
+            <div class="currentinput"></div>
+            <div class="answerscreen">0</div>
+        </section>
+
+        <section class="keypad-btns">
+            <button type="button" class="fun_btn" id="clear" value="">C</button>
+            <button type="button" class="fun_btn" id="eraser" value="">&#11013;</button>
+            <button type="button" class="fun_btn" value="/">/</button>
+            <button type="button" class="fun_btn" value="%">%</button>
+            <button type="button" class="fun_btn" value="7">7</button>
+            <button type="button" class="fun_btn" value="8">8</button>
+            <button type="button" class="fun_btn" value="9">9</button>
+            <button type="button" class="fun_btn" value="*">*</button>
+            <button type="button" class="fun_btn" value="4">4</button>
+            <button type="button" class="fun_btn" value="5">5</button>
+            <button type="button" class="fun_btn" value="6">6</button>
+            <button type="button" class="fun_btn" value="-">-</button>
+            <button type="button" class="fun_btn" value="1">1</button>
+            <button type="button" class="fun_btn" value="2">2</button>
+            <button type="button" class="fun_btn" value="3">3</button>
+            <button type="button" class="fun_btn" value="+">+</button>
+            <button type="button" class="fun_btn" value="00">00</button>
+            <button type="button" class="fun_btn" value="0">0</button>
+            <button type="button" class="fun_btn" value="_">_</button>
+            <button type="button" class="fun_btn" value="" id="evaluate">=</button>
+        </section>
+    </div>
+</body>
+</html>

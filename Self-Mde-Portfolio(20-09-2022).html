@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Made-Portfolio.personal</title>
+    <script src="https://kit.fontawesome.com/62e8a0a911.js" crossorigin="anonymous"></script>
+
+    <style>
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image:  linear-gradient(90deg,rgba(0, 0, 0, 0.527),rgba(247, 233, 233, 0.411)),url("bmgmall.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+h3{
+    font-size: 50px;
+    font-family: Bradley Hand ITC;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    transition-duration: 0.5s;
+}
+
+nav ul li a:hover{
+    width: 100%;
+    color: red;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+    color: white;
+    text-align: left;
+}
+
+.header-text p{
+    color: white;
+    text-align: left;
+}
+
+.header-text h1 span{
+    color: red;
+}
+
+/* about my self */
+
+#about{
+    padding: 80px 0;
+    color: grey ;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: grey;
+}
+
+.tab-tilte{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0px;
+    bottom: -8px;
+    transition-duration: 0.5s;
+}
+
+.tab-titles.active-link{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: red;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+
+}
+
+.tab-contents.active-tab
+{
+    display: block;
+}
+
+/* services */
+
+#services{
+    padding: 30px 0px;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.services-list div{
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-right: 10px;
+    transition:background-color 0.5s, transform 0.5s;
+}
+
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a{
+    text-decoration: none;
+    width: 80px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    background-color: orangered;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+    transition-duration: 0.5s;
+}
+
+.services-list div a:hover{
+    color: black;
+}
+
+/* portfolio */
+
+#portfolio{
+    padding: 50px 0;
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 70%;
+    border-radius: 10px;
+    display: block;
+    height: 578px;
+}
+
+.layer{
+    width: 70%;
+    height: 578px;
+    background: linear-gradient(rgba(0,0,0,0.6),red);
+    border-radius: 10px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+    </style>
+</head>
+<body>
+    
+    <div id="header">
+        <div class="container">
+
+            <nav>
+            <h3>SACHiN</h3>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-text">
+        <p>WeB DESiGNER</p>
+        <h1>Hi, I'm <span>&nbsp; SACHiN </span><br> HR-47 From INDiA </h1>
+        </div>
+    </div>
+</div>
+
+<!-- about -->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+
+            <div class="about-col-1">
+                <img src="blackbg.jpg" alt="blackbg">
+            </div>
+
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id officia aperiam nihil impedit, accusantium aliquid est assumenda ut fugit illo quos deserunt accusamus incidunt fuga amet voluptatem voluptate corporis rem necessitatibus temporibus asperiores quae consequuntur quia? Reprehenderit, cumque asperiores nobis beatae rem, officiis nemo sunt accusantium doloribus ducimus dolor animi?</p>
+
+                <div class="tab-titles active-link">
+                    <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Ui/Ux</span>Designer web developor</li>
+                        <li><span>Ui/Ux</span>Designer web developor</li>
+                        <li><span>Ui/Ux</span>Designer web developor</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>Ui/Ux</span>Designer web developor</li>
+                        <li><span>Ui/Ux</span>Designer web developor</li>
+                        <li><span>Ui/Ux</span>Designer web developor</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Ui/Ux</span>Designer web developor</li>
+                        <li><span>Ui/Ux</span>Designer web developor</li>
+                        <li><span>Ui/Ux</span>Designer web developor</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- SERVICES -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My SERViCES</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nihil impedit atque ratione saepe vitae facilis. Natus quia exercitationem magnam.</p>
+                <a href="#">learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>ui/ux Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nihil impedit atque ratione saepe vitae facilis. Natus quia exercitationem magnam.</p>
+                <a href="#">learn more</a>
+            </div>
+
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>app Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nihil impedit atque ratione saepe vitae facilis. Natus quia exercitationem magnam.</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- portfolio -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My  WoRK</h1>
+
+        <div class="work-list">
+            <div class="work">
+                <img src="17.jpg" alt="">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in praesentium numquam quos, ratione obcaecati.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+
+            <div class="work">
+                <img src="18.jpg" alt="">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in praesentium numquam quos, ratione obcaecati.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+            </div>
+
+            <div class="work">
+                <img src="menmade.jpg" alt="">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in praesentium numquam quos, ratione obcaecati.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tab");
+        }
+
+        event.currentTtarget.claslist.add("active-link");
+        document.getElementById(tabname).classlist.add("active-tab")
+    }
+
+
+</script>
+
+</body>
+</html>

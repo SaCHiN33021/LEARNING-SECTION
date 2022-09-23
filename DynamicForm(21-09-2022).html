@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynamicForm.html</title>
+    <link rel="stylesheet" href="DynamicForm.css">
+
+    <style>
+
+body{
+    background-image: linear-gradient(90deg,#c2cad06b,#e7727093), url("login1.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: black;
+    width: 40%;
+    height: 390px;
+    border-radius: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 42px;
+    margin-top: 50px;
+    font-family: Copperplate Gothic Bold;
+}
+
+label{
+    width: 211px;
+    height: 34px;
+    font-family: Book Antiqua;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+input{
+    box-sizing: border-box;
+    width: 326px;
+    height: 35px;
+    margin-left: 70px;
+    background: #5cdb95;
+    border: 1px solid #5cdb95;
+    box-shadow: 0px 4px 4px #f13c20;
+    border-radius: 25px;
+    transition-duration: all 0.5s;
+    padding-left: 5%;
+    color: white;
+}
+
+input form{
+    outline: none;
+    box-shadow: 0px 0px 15px #ffb878;
+}
+
+button{
+    display: flex;
+    width: 62px;
+    height: 100%;
+    background: linear-gradient(90deg,#c2cad0,#e77170);
+    border-radius: 25px;
+    color: white;
+    border: 0;
+    padding-top: 7px;
+    margin-left: 70px;
+    cursor: pointer;
+    transition-duration: all 0.5s;
+}
+
+button:hover{
+    box-shadow: 0px 0px 15px white;
+}
+
+.container{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+}
+
+.vaild{
+    display: block;
+    animation: valid is forwards;
+}
+
+.fa-spinner{
+    width: 20px;
+    font-size: large;
+    margin: auto;
+    color: #ffb870;
+    animation: spin 2s infinite;
+}
+
+#check{
+    display: none;
+    width: 20px;
+    font-size: large;
+    margin: auto;
+    color: pink;
+
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin{
+    from{
+        width: 40px;
+    }
+
+    to{
+        width: 100px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <h1>Register Account Form</h1>
+    
+    <form method="post" onsubmit="">
+        <label for="username">USERNAME:</label>
+        <input type="text" name="username" value="Enter the Username" autocomplete="off" id="">
+
+        <label for="youremail">YOUR EMAIL:</label>
+        <input type="text" name="youremail" autocomplete="off" value="Enter the Email" id="">
+         
+        <label for="password">PASSWORD:</label>
+        <input type="text" name="password" autocomplete="off" value="Enter the Password" id="">
+
+        <div class="container">
+            <button type="submit" id="connect" class="button type3">
+                <span>Connect</span>
+            </button>
+            <i class="fa-duotone fa-spinner"></i>
+            <i class="fa-duotone fa-badge-check"></i>
+
+        </div>
+    </form>
+    
+</body>
+</html>
